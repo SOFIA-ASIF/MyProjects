@@ -1,6 +1,12 @@
+// 3/30/2024
+import chalkAnimation from "chalk-animation";
 import chalk from "chalk";
 import inquirer from "inquirer";
-console.log(chalk.green(`Welcome!!`));
+const rainbowAnimation = chalkAnimation.rainbow(`Welcome!!`);
+rainbowAnimation.start();
+setTimeout(() => {
+    rainbowAnimation.stop();
+}, 3000);
 let todos = [];
 let goals = [];
 let condition = true;
