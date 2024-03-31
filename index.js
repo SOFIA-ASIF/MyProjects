@@ -30,7 +30,7 @@ if (what.whatTasks === "Add tasks for today") {
         todos.push(todoList.tasks);
         condition = todoList.addMore;
     }
-    console.log(chalk.bgCyanBright.italic.bold("Your tasks are following:"));
+    console.log(chalk.underline.italic.bold("Your tasks are following:"));
     for (let i = 0; i < todos.length; i++) {
         console.log(chalk.gray(`${i}. ${todos[i]}`));
     }
@@ -64,7 +64,7 @@ else if (what.whatTasks === "bucket list") {
         goals.push(bucket.bucketList);
         condition = bucket.wantMore;
     }
-    console.log(chalk.bgCyanBright.italic.bold("Your goals are following:"));
+    console.log(chalk.underline.italic.bold("Your goals are following:"));
     for (let i = 0; i < goals.length; i++) {
         console.log(chalk.yellow(`${i}. ${goals[i]}`));
     }
