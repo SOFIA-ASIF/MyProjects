@@ -9,8 +9,8 @@ let what = await inquirer.prompt([
         name: "whatTasks",
         type: "list",
         message: "What do you want to do today",
-        choices: ["Add tasks for today", "A full day plan", "bucket list"]
-    }
+        choices: ["Add tasks for today", "A full day plan", "bucket list"],
+    },
 ]);
 if (what.whatTasks === "Add tasks for today") {
     while (condition) {
@@ -18,14 +18,14 @@ if (what.whatTasks === "Add tasks for today") {
             {
                 name: "tasks",
                 type: "input",
-                message: "Add your task"
+                message: "Add your task",
             },
             {
                 name: "addMore",
                 type: "confirm",
                 message: "Do you want to add more task",
-                default: false
-            }
+                default: false,
+            },
         ]);
         todos.push(todoList.tasks);
         condition = todoList.addMore;
@@ -37,7 +37,8 @@ if (what.whatTasks === "Add tasks for today") {
 }
 else if (what.whatTasks === "A full day plan") {
     console.log(chalk.italic.bold(`An ideal day includes following `));
-    console.log(chalk.cyan.dim(` 1. Start the day with 30 minutes of exercise to energize the body and mind
+    console.log(chalk.cyan
+        .dim(` 1. Start the day with 30 minutes of exercise to energize the body and mind
     2. Aim to drink at least 2 liters of water throughout the day
     3. practice mindfulness to rejuvenate the mind.
     4. Enjoy a balanced lunch with vegetables, lean protein, and whole grains
@@ -51,14 +52,14 @@ else if (what.whatTasks === "bucket list") {
             {
                 name: "bucketList",
                 message: "Set your goals for the future",
-                type: "input"
+                type: "input",
             },
             {
                 name: "wantMore",
                 message: "Do you want to add more tasks",
                 type: "confirm",
-                default: false
-            }
+                default: false,
+            },
         ]);
         goals.push(bucket.bucketList);
         condition = bucket.wantMore;
